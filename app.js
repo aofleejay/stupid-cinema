@@ -53,7 +53,8 @@ let getTotalBooked = () => $('.btn-danger').length
 let renderSummary = (discount = 100) => {
   let totalPrice = getTotalPrice(discount)
       totalBooked = getTotalBooked()
-  $('#price').html(`${totalBooked} Seats : ${totalPrice} Baht`)
+  $('#totalBooked').html(totalBooked)
+  $('#totalPrice').html(totalPrice)
 }
 
 let checkout = () => {
