@@ -1,10 +1,14 @@
+import Cinema from './class/Cinema'
+import Discount from './class/Discount'
+import Price from './class/Price'
+
 $(document).ready(function () {
   let cinema = new Cinema
   let price  = new Price
   let discount  = new Discount
 
   $('#seats .seat').on('click', function() {
-    disabledSelector = $(this).hasClass('btn-disable')
+    let disabledSelector = $(this).hasClass('btn-disable')
     if (!disabledSelector) {
       $(this).toggleClass('btn-success btn-danger')
       price.calculateTotalPrice()

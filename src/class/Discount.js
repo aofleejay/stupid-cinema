@@ -7,3 +7,5 @@ class Discount {
     return this.redeemCode === inputCode
   }
 }
+
+export default Discount

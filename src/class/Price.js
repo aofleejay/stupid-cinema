@@ -52,3 +52,5 @@ class Price {
     alert(`${this.getTotalBooked()} Seats : ${this.getTotalPrice()} Baht`)
   }
 }
+
+export default Price

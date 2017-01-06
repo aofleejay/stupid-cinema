@@ -9,3 +9,5 @@ class Util {
     return indexArray
   }
 }
+
+export default Util

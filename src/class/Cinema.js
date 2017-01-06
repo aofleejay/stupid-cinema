@@ -1,3 +1,6 @@
+import Util from './Util'
+import Seat from './Seat'
+
 class Cinema {
   constructor() {
     this.seats = []
@@ -25,3 +28,5 @@ class Cinema {
     }
   }
 }
+
+export default Cinema

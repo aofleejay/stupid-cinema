@@ -4,3 +4,5 @@ class Seat {
     this.price = price
   }
 }
+
+export default Seat
