@@ -1,9 +1,9 @@
 class Discount {
-  constructor() {
+  constructor () {
     this.redeemCode = 'HAPPYNEWYEAR2017'
   }
 
-  verifyCode(inputCode) {
+  verifyCode (inputCode) {
     return this.redeemCode === inputCode
   }
 }

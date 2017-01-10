@@ -1,5 +1,7 @@
+import $ from 'jquery'
+
 class Price {
-  constructor() {
+  constructor () {
     this.totalPrice = 0
     this.totalBooked = 0
     this.discount = 0
@@ -7,45 +9,45 @@ class Price {
     this.renderSummary()
   }
 
-  getTotalPrice() {
+  getTotalPrice () {
     return this.totalPrice
   }
 
-  getTotalBooked() {
+  getTotalBooked () {
     return this.totalBooked
   }
 
-  getDiscount() {
+  getDiscount () {
     return this.discount
   }
 
-  setDiscount(discount) {
+  setDiscount (discount) {
     this.discount = discount
     this.calculateTotalPrice()
     this.calculateTotalBooked()
     this.renderSummary()
   }
 
-  calculateTotalPrice() {
+  calculateTotalPrice () {
     let totalPrice = 0
-    $('.btn-danger').each(function() {
+    $('.btn-danger').each(function () {
       totalPrice += parseInt($(this).data('price'), 10)
     })
 
     this.totalPrice = totalPrice * (100 - this.getDiscount()) / 100
   }
 
-  calculateTotalBooked() {
+  calculateTotalBooked () {
     this.totalBooked = $('.btn-danger').length
   }
 
-  renderSummary() {
+  renderSummary () {
     $('#totalBooked').html(this.getTotalBooked())
     $('#totalPrice').html(this.getTotalPrice())
   }
 
-  checkout() {
-    $('.btn-danger').each(function() {
+  checkout () {
+    $('.btn-danger').each(function () {
       $(this).removeClass('btn-danger').addClass('disabled btn-disable')
     })
     
